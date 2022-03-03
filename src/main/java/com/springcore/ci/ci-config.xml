@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+ http://www.springframework.org/schema/beans/spring-beans.xsd
+ http://www.springframework.org/schema/context
+ http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+<bean class="com.springcore.ci.Certi" id="cer" c:name="Kotlin">
+	<!-- <constructor-arg value="Android using Kotlin"></constructor-arg> -->
+	
+</bean>
+
+	<bean class="com.springcore.ci.Person" id="person">
+		<constructor-arg>
+			<value>Mr C</value>
+		</constructor-arg>
+		<constructor-arg value= "22"/>
+		
+		<constructor-arg ref="cer"/>
+		<constructor-arg name="phones">
+			<list>
+				<value>23453656</value>
+				<value>454654767</value>
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean class="com.springcore.ci.Adition" id="adition">
+		<constructor-arg value= "22" type="int" index="1"/>
+		<constructor-arg value= "28" type="int" index= "0"/>
+	</bean>
+
+</beans>
