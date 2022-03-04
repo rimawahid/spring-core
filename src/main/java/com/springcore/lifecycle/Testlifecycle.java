@@ -9,13 +9,16 @@ public class Testlifecycle {
 		//registering shutdown hook
 		ctx.registerShutdownHook();
 		
-		Car car = (Car) ctx.getBean("car");
-		System.out.println(car);
+		/*
+		 * Car car = (Car) ctx.getBean("car"); System.out.println(car);
+		 * 
+		 * System.out.println("++++++++++++++++++++++");
+		 * 
+		 * Fruit fruit = (Fruit) ctx.getBean("fruit"); System.out.println(fruit);
+		 */
 		
-		System.out.println("++++++++++++++++++++++");
-		
-		Fruit fruit = (Fruit) ctx.getBean("fruit");
-		System.out.println(fruit);
+		ExampleAnnotation exm = (ExampleAnnotation) ctx.getBean("exmp");
+		System.out.println(exm);
 		
 	}
 }

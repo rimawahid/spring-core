@@ -7,20 +7,17 @@
  http://www.springframework.org/schema/beans/spring-beans.xsd
  http://www.springframework.org/schema/context
  http://www.springframework.org/schema/context/spring-context.xsd">
- 
- <context:annotation-config/>
 
-	<!-- <bean class="com.springcore.lifecycle.Car" name="car"
-		init-method="init" destroy-method="destroy">
-		<property name="price" value="2000" />
+<context:annotation-config/>
+	<bean class="com.sprintcore.auto.wire.annotation.Address" name="address1">
+		<property name="state" value="Mirpur"/>
+		<property name="city" value="Dhaka"/>
+	</bean>
+	<bean class="com.sprintcore.auto.wire.annotation.Address" name="address2">
+		<property name="state" value="Kakril"/>
+		<property name="city" value="Dhaka"/>
 	</bean>
 	
-	<bean class="com.springcore.lifecycle.Fruit" name="fruit">
-	<property name="name" value="Mango"/>
-	</bean> -->
+	<bean class ="com.sprintcore.auto.wire.annotation.Emp" name="emp1" />
 	
-	<bean class ="com.springcore.lifecycle.ExampleAnnotation" name="exmp">
-		<property name="subject"    value="java"></property>
-	</bean>
-
 </beans>
